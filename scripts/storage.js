@@ -112,13 +112,3 @@ export function clearAllData() {
     return false;
   }
 }
-
-export {
-  loadTransactions,
-  saveTransactions,
-  loadSettings,
-  saveSettings,
-  exportToJSON,
-  importFromJSON,
-  clearAllData,
-};
