@@ -1,4 +1,5 @@
-Student Finance Tracker
+*Student Finance Tracker*
+
 A responsive, accessible, vanilla HTML/CSS/JS application to track student expenses, set budgets, and analyze spending with regex-powered search and validation.
 
 Live demo: https://Jobealieu.github.io/student-finance-tracker
@@ -30,7 +31,7 @@ File structure
 
 Installation / Run locally
 	1. Clone the repository:
-git clone https://github.com/YOUR_USERNAME/student-finance-tracker.git
+git clone https://github.com/Jobealieu/student-finance-tracker.git
 	2. Open project in VSCode.
 	3. Serve with a static server (required for modules):
 
