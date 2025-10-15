@@ -1,11 +1,11 @@
 Student Finance Tracker
 A responsive, accessible, vanilla HTML/CSS/JS application to track student expenses, set budgets, and analyze spending with regex-powered search and validation.
 
-Live demo: https://YOUR_USERNAME.github.io/student-finance-tracker
+Live demo: https://Jobealieu.github.io/student-finance-tracker
 
 Author: Alieu O Jobe
-Contact: your.email@example.com
-Repository: https://github.com/YOUR_USERNAME/student-finance-tracker
+Contact: a.jobe@alustudent.com
+Repository: https://github.com/Jobealieu/student-finance-tracker
 
 Overview
 Student Finance Tracker helps students record transactions, monitor spending against a monthly budget, and explore data using regular expressions. The app stores data in localStorage and supports JSON import/export.
