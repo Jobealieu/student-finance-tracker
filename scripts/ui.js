@@ -233,7 +233,14 @@ export function populateCategoryOptions() {
   if (!categorySelect) return;
 
   const state = appState.getState();
-  const categories = state.settings.categories;
+  const categories = (state.settings && state.settings.categories) || [
+    "Food",
+    "Books",
+    "Transport",
+    "Entertainment",
+    "Fees",
+    "Other",
+  ];
 
   categorySelect.innerHTML = categories
     .map((cat) => `<option value="${cat}">${cat}</option>`)
