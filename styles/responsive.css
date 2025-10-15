@@ -1,0 +1,167 @@
+@media (min-width: 360px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .header-content h1 {
+    font-size: 1.75rem;
+  }
+  
+  nav ul {
+    gap: var(--spacing-lg);
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .page-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .card {
+    padding: var(--spacing-xl);
+  }
+  
+  .form-actions {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .currency-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  table {
+    display: table;
+  }
+  
+  thead {
+    display: table-header-group;
+  }
+  
+  tbody {
+    display: table-row-group;
+  }
+  
+  tr {
+    display: table-row;
+  }
+  
+  td, th {
+    display: table-cell;
+  }
+  
+  td::before {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-content {
+    padding: 0 var(--spacing-xl);
+  }
+  
+  main {
+    padding: var(--spacing-xl) var(--spacing-xl);
+  }
+  
+  .stats-grid {
+    gap: var(--spacing-lg);
+  }
+  
+  .stat-value {
+    font-size: 2.5rem;
+  }
+  
+  #trend-chart {
+    height: 250px;
+  }
+  
+  .currency-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  nav ul {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  
+  table {
+    display: block;
+  }
+  
+  thead {
+    display: none;
+  }
+  
+  tbody {
+    display: block;
+  }
+  
+  tr {
+    display: block;
+    margin-bottom: var(--spacing-lg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+  }
+  
+  td {
+    display: block;
+    text-align: right;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  td:last-child {
+    border-bottom: none;
+  }
+  
+  td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+  
+  .actions-cell {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+  }
+  
+  .actions-cell::before {
+    display: none;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+  
+  .search-input-group {
+    flex-direction: column;
+  }
+  
+  .import-export-section {
+    flex-direction: column;
+  }
+  
+  .import-export-section .btn {
+    width: 100%;
+  }
+}

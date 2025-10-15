@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tests - Student Finance Tracker</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <main style="max-width:900px;margin:2rem auto;">
+    <h1>Validator & Regex Tests</h1>
+    <div id="results" class="card"></div>
+  </main>
+
+  <script type="module">
+    import { validateField, REGEX_PATTERNS } from './scripts/validators.js';
+    import { compileRegex } from './scripts/search.js';
+    import { importFromJSON, exportToJSON } from './scripts/storage.js';
+
+    const resultsEl = document.getElementById('results');
+
+    function assert(name, ok, message='') {
+      const el = document.createElement('div');
+      el.style.padding = '0.5rem 0';
+      el.textContent = `${name}: ${ok ? 'PASS' : 'FAIL'} ${message ? '- ' + message : ''}`;
+      el.style.color = ok ? 'var(--success-color)' : 'var(--danger-color)';
+      resultsEl.appendChild(el);
+    }
+
+    // Description tests
+    assert('Description no leading/trailing', !validateField('description', '  leading'), 'leading spaces should fail');
+    assert('Description collapse doubles', validateField('description', 'Normal text') === null, 'valid text should pass');
+
+    // Amount tests
+    assert('Amount valid 12.50', validateField('amount', '12.50') === null);
+    assert('Amount invalid 12.345', validateField('amount', '12.345') !== null);
+
+    // Date tests
+    assert('Date valid 2025-01-20', validateField('date', '2025-01-20') === null);
+    assert('Date invalid 2025-13-01', validateField('date', '2025-13-01') !== null);
+
+    // Category tests
+    assert('Category valid "Food"', validateField('category', 'Food') === null);
+    assert('Category invalid "Food1"', validateField('category', 'Food1') !== null);
+
+    // Duplicate word test
+    assert('Duplicate words detection', validateField('duplicateWords', 'the the') !== null);
+
+    // Regex compile tests
+    assert('Compile valid pattern', compileRegex('\\.\\d{2}\\b') instanceof RegExp);
+    assert('Compile invalid pattern', compileRegex('[') === null, 'invalid regex returns null');
+
+  </script>
+</body>
+</html>

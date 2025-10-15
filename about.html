@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Student Finance Tracker and contact information" />
+  <title>About - Student Finance Tracker</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+</head>
+<body data-page="about">
+  <a href="#main-content" id="skip-link">Skip to main content</a>
+
+  <header role="banner">
+    <div class="header-content">
+      <h1>Student Finance Tracker</h1>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="records.html">Records</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <div class="page-header">
+      <h2>About this Project</h2>
+      <p>Student Finance Tracker is a simple, accessible, responsive app to help students track expenses, set budgets, and analyze spending patterns.</p>
+    </div>
+
+    <section class="card" aria-labelledby="purpose-heading">
+      <h3 id="purpose-heading">Purpose</h3>
+      <p>This project demonstrates a vanilla JavaScript single-page-style application with semantic HTML, mobile-first responsive CSS, regex-powered validation and search, localStorage persistence, JSON import/export, and accessibility features such as keyboard navigation and ARIA live regions.</p>
+    </section>
+
+    <section class="card" aria-labelledby="contact-heading">
+      <h3 id="contact-heading">Contact & Repository</h3>
+      <p>Developer: Alieu O Jobe</p>
+      <p>GitHub: <a href="https://github.com/Jobealieu/student-finance-tracker" target="_blank" rel="noopener">https://github.com/Jobealieu/student-finance-tracker</a></p>
+      <p>Email: <a href="mailto:a.jobe@alustudent.com">a.jobe@alustudent.com</a></p>
+    </section>
+
+    <section class="card" aria-labelledby="notes-heading">
+      <h3 id="notes-heading">Notes</h3>
+      <ul>
+        <li>All data is stored locally in the browser using localStorage.</li>
+        <li>Import/export uses JSON only; imported data is validated for structure before loading.</li>
+        <li>Regex search compiles safely with try/catch; invalid patterns are reported to the user.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Student Finance Tracker. Built by Alieu O Jobe.</p>
+    <p><a href="https://github.com/Jobealieu/student-finance-tracker" target="_blank" rel="noopener">View on GitHub</a></p>
+  </footer>
+
+  <div id="status-announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

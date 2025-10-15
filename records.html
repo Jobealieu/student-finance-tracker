@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manage your financial transactions and records">
+  <title>Records - Student Finance Tracker</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body data-page="records">
+  <a href="#main-content" id="skip-link">Skip to main content</a>
+  
+  <header role="banner">
+    <div class="header-content">
+      <h1>Student Finance Tracker</h1>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="records.html" class="active" aria-current="page">Records</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main-content" tabindex="-1">
+    <div class="page-header">
+      <h2>Transaction Records</h2>
+      <p>Add, edit, search, and manage your transactions</p>
+    </div>
+    
+    <section aria-labelledby="form-title" class="card">
+      <h3 id="form-title">Add Transaction</h3>
+      <form id="transaction-form" novalidate>
+        <input type="hidden" id="transaction-id" value="">
+        
+        <div class="form-group">
+          <label for="description">Description *</label>
+          <input 
+            type="text" 
+            id="description" 
+            name="description" 
+            required 
+            aria-required="true"
+            placeholder="e.g., Lunch at cafeteria">
+        </div>
+        
+        <div class="form-group">
+          <label for="amount">Amount *</label>
+          <input 
+            type="number" 
+            id="amount" 
+            name="amount" 
+            step="0.01" 
+            min="0" 
+            required 
+            aria-required="true"
+            placeholder="0.00">
+        </div>
+        
+        <div class="form-group">
+          <label for="category">Category *</label>
+          <select 
+            id="category" 
+            name="category" 
+            required 
+            aria-required="true">
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="date">Date *</label>
+          <input 
+            type="date" 
+            id="date" 
+            name="date" 
+            required 
+            aria-required="true">
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="submit-btn">Add Transaction</button>
+          <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </section>
+    
+    <section aria-labelledby="search-heading" class="card">
+      <h3 id="search-heading">Search Transactions</h3>
+      <div class="search-container">
+        <div class="search-input-group">
+          <label for="search-input" class="visually-hidden">Search pattern</label>
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Enter regex pattern (e.g., coffee|tea)"
+            aria-describedby="search-error">
+          <label for="case-sensitive" style="display: flex; align-items: center; gap: 0.5rem;">
+            <input type="checkbox" id="case-sensitive">
+            Case sensitive
+          </label>
+        </div>
+        <div id="search-error" role="alert"></div>
+        
+        <div class="search-suggestions">
+          <span style="font-size: 0.875rem; color: var(--text-secondary);">Quick patterns:</span>
+          <button class="search-suggestion" data-pattern="\.\d{2}\b" type="button">Amounts with cents</button>
+          <button class="search-suggestion" data-pattern="(coffee|tea)" type="button">Coffee or tea</button>
+          <button class="search-suggestion" data-pattern="\b(\w+)\s+\1\b" type="button">Duplicate words</button>
+          <button class="search-suggestion" data-pattern="^Food$" type="button">Food category</button>
+        </div>
+      </div>
+    </section>
+    
+    <section aria-labelledby="table-heading" class="card">
+      <h3 id="table-heading">All Transactions</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="date">Date</th>
+              <th class="sortable" data-sort="description">Description</th>
+              <th class="sortable" data-sort="category">Category</th>
+              <th class="sortable" data-sort="amount">Amount</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="transactions-tbody">
+          </tbody>
+        </table>
+        <div id="empty-state" class="empty-state" style="display: none;">
+          <p>No transactions found. Add your first transaction above.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer role="contentinfo">
+    <p>&copy; 2025 Student Finance Tracker. Built by Alieu O Jobe.</p>
+    <p><a href="https://github.com/Jobealieu/student-finance-tracker">View on GitHub</a></p>
+  </footer>
+  
+  <div id="status-announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+  
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

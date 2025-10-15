@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Financial dashboard with budget tracking and spending analytics">
+  <title>Dashboard - Student Finance Tracker</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body data-page="dashboard">
+  <a href="#main-content" id="skip-link">Skip to main content</a>
+  
+  <header role="banner">
+    <div class="header-content">
+      <h1>Student Finance Tracker</h1>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html" class="active" aria-current="page">Dashboard</a></li>
+          <li><a href="records.html">Records</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main-content" tabindex="-1">
+    <div class="page-header">
+      <h2>Financial Dashboard</h2>
+      <p>Overview of your spending and budget status</p>
+    </div>
+    
+    <section aria-labelledby="stats-heading">
+      <h3 id="stats-heading" class="visually-hidden">Financial Statistics</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Total Transactions</div>
+          <div class="stat-value" id="total-records">0</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-label">Total Spent</div>
+          <div class="stat-value" id="total-amount">$0.00</div>
+        </div>
+
+<div class="stat-card">
+          <div class="stat-label">Top Category</div>
+          <div class="stat-value" id="top-category">N/A</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-label">Budget Remaining</div>
+          <div class="stat-value positive" id="budget-remaining">$0.00</div>
+        </div>
+      </div>
+    </section>
+    
+    <section aria-labelledby="budget-heading" class="card">
+      <h3 id="budget-heading">Budget Progress</h3>
+      <div class="budget-bar-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Budget usage percentage">
+        <div class="budget-bar success" id="budget-bar" style="width: 0%"></div>
+      </div>
+    </section>
+    
+    <div style="display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg);">
+      <section aria-labelledby="category-heading" class="card">
+        <h3 id="category-heading">Spending by Category</h3>
+        <div id="category-breakdown">
+          <p class="empty-state">No transactions yet</p>
+        </div>
+      </section>
+      
+      <section aria-labelledby="trend-heading" class="card">
+        <h3 id="trend-heading">Last 7 Days Spending</h3>
+        <div id="trend-chart" role="img" aria-label="Bar chart showing spending over the last 7 days">
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <footer role="contentinfo">
+    <p>&copy; 2025 Student Finance Tracker. Built by Alieu O Jobe.</p>
+    <p><a href="https://github.com/Jobealieu/student-finance-tracker">View on GitHub</a></p>
+  </footer>
+  
+  <div id="status-announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+  
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
