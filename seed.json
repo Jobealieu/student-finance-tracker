@@ -1,0 +1,110 @@
+[
+  {
+    "id": "txn_001",
+    "description": "Lunch at campus cafeteria",
+    "amount": 12.50,
+    "category": "Food",
+    "date": "2025-01-20",
+    "createdAt": "2025-01-20T12:30:00.000Z",
+    "updatedAt": "2025-01-20T12:30:00.000Z"
+  },
+  {
+    "id": "txn_002",
+    "description": "Chemistry textbook",
+    "amount": 89.99,
+    "category": "Books",
+    "date": "2025-01-18",
+    "createdAt": "2025-01-18T09:15:00.000Z",
+    "updatedAt": "2025-01-18T09:15:00.000Z"
+  },
+  {
+    "id": "txn_003",
+    "description": "Monthly bus pass",
+    "amount": 45.00,
+    "category": "Transport",
+    "date": "2025-01-15",
+    "createdAt": "2025-01-15T08:00:00.000Z",
+    "updatedAt": "2025-01-15T08:00:00.000Z"
+  },
+  {
+    "id": "txn_004",
+    "description": "Coffee with study group",
+    "amount": 8.75,
+    "category": "Entertainment",
+    "date": "2025-01-22",
+    "createdAt": "2025-01-22T14:45:00.000Z",
+    "updatedAt": "2025-01-22T14:45:00.000Z"
+  },
+  {
+    "id": "txn_005",
+    "description": "Lab equipment fee",
+    "amount": 35.00,
+    "category": "Fees",
+    "date": "2025-01-10",
+    "createdAt": "2025-01-10T10:00:00.000Z",
+    "updatedAt": "2025-01-10T10:00:00.000Z"
+  },
+  {
+    "id": "txn_006",
+    "description": "Pizza dinner",
+    "amount": 18.50,
+    "category": "Food",
+    "date": "2025-01-21",
+    "createdAt": "2025-01-21T19:30:00.000Z",
+    "updatedAt": "2025-01-21T19:30:00.000Z"
+  },
+  {
+    "id": "txn_007",
+    "description": "Mathematics reference book",
+    "amount": 45.00,
+    "category": "Books",
+    "date": "2025-01-12",
+    "createdAt": "2025-01-12T11:20:00.000Z",
+    "updatedAt": "2025-01-12T11:20:00.000Z"
+  },
+  {
+    "id": "txn_008",
+    "description": "Movie tickets",
+    "amount": 24.00,
+    "category": "Entertainment",
+    "date": "2025-01-19",
+    "createdAt": "2025-01-19T20:00:00.000Z",
+    "updatedAt": "2025-01-19T20:00:00.000Z"
+  },
+  {
+    "id": "txn_009",
+    "description": "Breakfast sandwich",
+    "amount": 6.25,
+    "category": "Food",
+    "date": "2025-01-23",
+    "createdAt": "2025-01-23T08:15:00.000Z",
+    "updatedAt": "2025-01-23T08:15:00.000Z"
+  },
+  {
+    "id": "txn_010",
+    "description": "Gym membership",
+    "amount": 30.00,
+    "category": "Other",
+    "date": "2025-01-05",
+    "createdAt": "2025-01-05T16:00:00.000Z",
+    "updatedAt": "2025-01-05T16:00:00.000Z"
+  },
+  {
+    "id": "txn_011",
+    "description": "Notebook and pens",
+    "amount": 15.75,
+    "category": "Books",
+    "date": "2025-01-08",
+    "createdAt": "2025-01-08T13:30:00.000Z",
+    "updatedAt": "2025-01-08T13:30:00.000Z"
+  },
+  {
+    "id": "txn_012",
+    "description": "Uber ride home",
+    "amount": 12.00,
+    "category": "Transport",
+    "date": "2025-01-22",
+    "createdAt": "2025-01-22T23:45:00.000Z",
+    "updatedAt": "2025-01-22T23:45:00.000Z"
+  }
+]
