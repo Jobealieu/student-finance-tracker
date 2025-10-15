@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Student Finance Tracker
+=======
+*Student Finance Tracker*
+
+>>>>>>> 32c0488a0baa8d61a113403c3d9befb75fe8e955
 A responsive, accessible, vanilla HTML/CSS/JS application to track student expenses, set budgets, and analyze spending with regex-powered search and validation.
 
 Live demo: https://Jobealieu.github.io/student-finance-tracker
