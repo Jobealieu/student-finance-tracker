@@ -169,3 +169,16 @@ Open tests.html in a browser with a static server to run small assertions for va
 	* If imports fail, ensure you serve files over an HTTP server (file:// will not work for ES modules).
 	
 	* If GitHub Pages shows 404, ensure branch main is selected and index.html present at root.
+
+	
+**Demo video**
+
+2–3 minute demo showing: https://youtu.be/4hj27_2tZFc
+
+	* Keyboard navigation through the app
+	
+	* Adding, editing, and deleting transactions
+	
+	* Regex validation edge cases and regex search
+	
+	* Import and export JSON
